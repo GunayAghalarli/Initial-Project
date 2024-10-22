@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Web App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- JSTS Script for geospatial operations -->
+    <script src="https://cdn.jsdelivr.net/npm/jsts@2.5.0/dist/jsts.min.js"></script>
+    <style>
+        #map { 
+            height: 400px; 
+            width: 600px; 
+            display: block; /* Ensure map is visible */
+        }
+        .buttons-container {
+            margin-bottom: 10px;
+        }
+        .buttons-container button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>solution
+                        <img src="spacemaker.jpg" alt="Logo" /> Company Name
+                    </th>
+                    <th>map</th>
+                    <th>area</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td>
+                        <span class="selected" id="view1">Solution 1</span>
+                        <span class="selected" id="view2">Solution 2</span>
+                    </td>
+                    <td>
+                        <div class="buttons-container">
+                            <button id="intersectionBtn">Intersect</button>
+                            <button id="unionBtn">Union</button>
+                            <button id="resetBtn">Reset</button>
+                        </div>
+                        <!-- Map will be displayed here -->
+                        <div id="map"></div>
+                        <div id="result" style="margin-top: 20px; font-family: Arial, sans-serif;">
+                            Intersection or union result will appear here...
+                        </div>
+                    </td> 
+                    <td id="statistics">Some statistics related to the map will go here.</td>
+                </tr>
+               
+             </tbody>
+        </table>
+    </div>
+
+    <!-- Leaflet script for rendering the map -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" defer></script>
+    <!-- Your custom script.js -->
+    <script src="script.js" defer></script>
+</body>
+</html>
