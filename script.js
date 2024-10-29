@@ -90,7 +90,7 @@ document.getElementById('resetBtn').addEventListener('click', function () {
 });
 
 // load GeoJSON data for a map, and optionally re-add the result polygon and hide polygons
-function loadGeoJSONMapData(mapContainerId, geojsonUrl, resultPolygons = [], hiddenPolygons = []) {
+function loadGeoJSONMapData(mapContainerId, geojsonUrl, resultPolygons = [], invisiblePolygons = []) {
     fetch(geojsonUrl)
         .then(response => response.json())
         .then(mapData => {
