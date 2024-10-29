@@ -151,7 +151,7 @@ function initMap(mapContainerId, mapData) {
 }
 
 // handle click polygon events
-function handlePolygonClick(layer, feature) {
+function handlePolygonClick(layer) {
     const isSelected = selectedPolygons.includes(layer);
 
     if (isSelected) {
