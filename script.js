@@ -20,7 +20,7 @@ const defaultColor = '#3388ff';
 
 // // Load the initial map (Solution 1) on page load (uncomment if it is needed)
 // window.onload = function () {
-//     document.getElementById('solution1').classList.add('active');
+//     document.getElementById('view1').classList.add('active');
 //     loadGeoJSONMapData('map', 'SE_State_Management_Polygons_1.json');
 //     window.firstMapInitialize = true;
 // };
